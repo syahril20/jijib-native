@@ -9,7 +9,12 @@ interface Props {
   color?: string;
 }
 
-export default function CardStat({ title, value, icon, color = "#007bff" }: Props) {
+export default function CardStat({
+  title,
+  value,
+  icon,
+  color = "#007bff",
+}: Props) {
   return (
     <View
       style={{
@@ -24,10 +29,20 @@ export default function CardStat({ title, value, icon, color = "#007bff" }: Prop
         elevation: 3,
       }}
     >
-      <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <View>
-          <Text style={{ color: "#fff", fontWeight: "600", fontSize: 14 }}>{title}</Text>
-          <Text style={{ color: "#fff", fontWeight: "bold", fontSize: 22 }}>{value}</Text>
+          <Text style={{ color: "#fff", fontWeight: "600", fontSize: 14 }}>
+            {title}
+          </Text>
+          <Text style={{ color: "#fff", fontWeight: "bold", fontSize: 22 }}>
+            {value}
+          </Text>
         </View>
         <Ionicons name={icon as any} size={28} color="#fff" />
       </View>
